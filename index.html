@@ -71,7 +71,7 @@
         }
         @keyframes transform {
             0%{transform:rotate(-20deg)}
-            25%{transform:rotate(-30deg);}
+            /* 25%{transform:rotate(-30deg);} */
             50%{transform:rotate(-40deg);}
             /* 75%{transform:rotate(-50deg);}
             100%{transform:rotate(-60deg);} */
@@ -83,7 +83,7 @@
         }
         @keyframes trans {
             0%{transform:rotate(20deg)}
-            25%{transform:rotate(30deg);}
+            /* 25%{transform:rotate(30deg);} */
             50%{transform:rotate(40deg);}
         }
         #body{
@@ -107,6 +107,23 @@
             position: relative;
             top:-45px;
 
+        }
+        #l-leg{
+            animation: transform-leg 5s 3s infinite;
+          
+        }
+        @keyframes transform-leg {
+            0%{transform:translateY(0px)}
+            /* 25%{  transform: translateY(20px);} */
+            50%{transform:translateY(20px)}
+        }
+        #r-leg{
+            animation: transform-legs 5s 3s infinite;
+        }
+        @keyframes transform-legs {
+            0%{transform:translateY(0px)}
+            /* 25%{  transform: translateY(-20px);} */
+            50%{transform:translateY(-20px)}
         }
         @media screen and (max-width: 380px){
             #rhead{
