@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Robot</title>
+    <style>
+        .container{
+            width: 95%;
+            margin:5px auto;
+            padding:50px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            color: blueviolet;
+            text-shadow: 2px 2px 5px rgb(204, 9, 9);
+            font-size: bold;
+            margin:5px auto;
+            /* border-bottom:5px solid rgb(89, 89, 248);
+            border-right: 10px solid rgb(89, 89, 248); */
+            box-shadow: 1px 1px 15px #cecece;
+            width: 300px;
+            padding:5px;
+        }
+        .wrapper{
+            margin:0px auto;
+        }
+        #rhead{
+            background:blue;
+            border:2px solid blue;
+            width:300px;
+            height: 200px;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-left:45px;
+        }
+        .robot-eye{
+            width: 30px;
+            height: 30px;
+            background:#fff;
+            border:2px solid #fff;
+            border-radius:100%;
+            margin:auto 15px;
+        }
+        .robot-body{
+            background:#fff;
+            /* display: inline-block; */
+        }
+        .arm{
+            width: 40px;
+            height: 170px;
+            background:blue;
+            border:2px solid blue;
+            border-radius: 25px;
+            display: inline-block;
+            position: relative;
+            top: -100px;
+        }
+        #r-arm{
+            transform: rotate(-20deg);
+            animation: transform 5s 3s infinite;
+
+        }
+        @keyframes transform {
+            0%{transform:rotate(-20deg)}
+            25%{transform:rotate(-30deg);}
+            50%{transform:rotate(-40deg);}
+            /* 75%{transform:rotate(-50deg);}
+            100%{transform:rotate(-60deg);} */
+
+        }
+        #l-arm{
+            transform: rotate(20deg);
+            animation: trans 5s 3s infinite;
+        }
+        @keyframes trans {
+            0%{transform:rotate(20deg)}
+            25%{transform:rotate(30deg);}
+            50%{transform:rotate(40deg);}
+        }
+        #body{
+            background:blue;
+            width: 300px;
+            height: 300px;
+            border-bottom-right-radius: 25%;
+            border-bottom-left-radius: 25%;
+            display: inline-block;
+            margin-top:10px;
+
+        }
+        .leg{
+            width: 40px;
+            height: 150px;
+            background:blue;
+            border:2px solid blue;
+            border-radius: 25px;
+            display: inline-block;
+            margin-left:98px;
+            position: relative;
+            top:-45px;
+
+        }
+        @media screen and (max-width: 380px){
+            #rhead{
+                width: 200px;
+                height: 150px;
+                margin-left: 25px;
+            }
+            #body{
+                width: 200px;
+                height: 200px;
+                
+            }
+            .arm{
+                width: 20px;
+                height: 100px;
+                top:-90px;
+            }
+            .leg{
+                width: 20px;
+                height: 100px;
+                margin-left: 70px;
+            }
+            .robot-body{
+                text-align: center;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            #rhead{
+                width: 200px;
+                height: 150px;
+                margin-left: 25px;
+            }
+            #body{
+                width: 200px;
+                height: 200px;
+                
+            }
+            .arm{
+                width: 20px;
+                height: 100px;
+                top:-90px;
+            }
+            .leg{
+                width: 20px;
+                height: 100px;
+                margin-left: 70px;
+            }
+            .robot-body{
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Android Robot</h1>
+   <div class="container">
+       <div class="wrapper">
+        <div id="rhead">
+            <div class="robot-eye"></div>
+            <div class="robot-eye"></div>
+        </div>
+        <div class="robot-body">
+            <div id="l-arm" class="arm"></div>
+            <div id="body"></div>
+            <div id="r-arm" class="arm"></div>
+        </div>
+        <div>
+            <div id="l-leg" class="leg"></div>
+            <div id="r-leg" class="leg"></div>
+        </div>
+       </div>
+   </div>
+</body>
+</html>
